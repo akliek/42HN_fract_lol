@@ -6,43 +6,48 @@
 /*   By: akliek <akliek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 13:15:07 by akliek            #+#    #+#             */
-/*   Updated: 2021/08/06 15:23:22 by akliek           ###   ########.fr       */
+/*   Updated: 2021/08/11 12:06:56 by akliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "fract_ol.h"
 
-int	close_fractal(int key)
+int	error_check(int argc, char **argv)
 {
-	if (key == 53)
-		exit(EXIT_SUCCESS);
-	return (0);
+	if (argc < 2 || (ft_strcmp(argv[1], "Mandelbrot")
+			&& ft_strcmp(argv[1], "Burning Ship")
+			&& ft_strcmp(argv[1], "Julia")))
+	{
+		perror("Usage: ./fractol Mandelbrot || Julia || Burning Ship");
+		return (0);
+	}
+	if (!ft_strcmp(argv[1], "Julia") && argc < 3)
+	{
+		perror("Usage: ./fractol Mandelbrot || Julia || Burning Ship");
+		return (0);
+	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
 {
-	t_data	data;
+	t_data		data;
 
-	if (argc < 2 || ((ft_strcmp(argv[1], "Mandelbrot"))
-			&& (ft_strcmp(argv[1], "Julia") || argc < 3)))
-	{
-		perror("Usage: ./fracol Mandelbrot || Julia");
+	if (!error_check(argc, argv))
 		return (0);
-	}
-	if (*argv[1] == 'J')
+	if (argc < 2)
+		return (0);
+	if (*argv[1] == 'J' || *argv[1] == 'B')
 	{
-		data.julia = 1;
-		data.julia_type = *argv[2];
+		data.type = *argv[1];
+		if (*argv[1] == 'J')
+			data.julia_type = *argv[2];
 	}
-	data = zoom_init(data);
 	data.mlx.mlx = mlx_init();
-	data.mlx.win = mlx_new_window(data.mlx.mlx, 1080, 1080, "fract_ol");
-	data.mlx.img = mlx_new_image(data.mlx.mlx, 1080, 1080);
-	data.mlx.addr = mlx_get_data_addr(data.mlx.img, &data.mlx.bits_per_pixel,
-			&data.mlx.line_length, &data.mlx.endian);
-	draw(data);
-	mlx_hook(data.mlx.win, 2, 0, close_fractal, &data);
-//	mlx_hook(data.mlx.win, 2, 0, zoom, &data);
+	data.mlx.win = mlx_new_window(data.mlx.mlx, WIDTH, HEIGHT, "fract_ol");
+	data = start_init(data);
+	multithread(&data);
+	mlx_hook(data.mlx.win, 2, 0, keyboard_hooks, &data);
+	mlx_hook(data.mlx.win, 4, 0, zoom, &data);
 	mlx_loop(data.mlx.mlx);
 }
