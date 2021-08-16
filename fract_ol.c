@@ -6,7 +6,7 @@
 /*   By: akliek <akliek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 13:15:07 by akliek            #+#    #+#             */
-/*   Updated: 2021/08/11 12:06:56 by akliek           ###   ########.fr       */
+/*   Updated: 2021/08/16 14:46:34 by akliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 int	error_check(int argc, char **argv)
 {
+	int	n;
+
+	if (argv[2])
+		n = ft_atoi(argv[2]);
 	if (argc < 2 || (ft_strcmp(argv[1], "Mandelbrot")
 			&& ft_strcmp(argv[1], "Burning Ship")
 			&& ft_strcmp(argv[1], "Julia")))
 	{
-		perror("Usage: ./fractol Mandelbrot || Julia || Burning Ship");
+		perror("Usage: ./fractol Mandelbrot || Julia || \"Burning Ship\"");
 		return (0);
 	}
-	if (!ft_strcmp(argv[1], "Julia") && argc < 3)
+	if (!ft_strcmp(argv[1], "Julia") && (argc < 3 || n > 4 || n < 1))
 	{
-		perror("Usage: ./fractol Mandelbrot || Julia || Burning Ship");
+		perror("Usage: ./fractol Julia and number from 1 to 4");
 		return (0);
 	}
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: akliek <akliek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 13:23:35 by akliek            #+#    #+#             */
-/*   Updated: 2021/08/10 17:03:40 by akliek           ###   ########.fr       */
+/*   Updated: 2021/08/16 14:44:58 by akliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	multithread(t_data *data)
 	{
 		fractals[i] = *data;
 		fractals[i].start = i * (WIDTH / 10);
-		fractals[i].end = (i + 1) * (HEIGHT / 10);
+		fractals[i].end = (i + 1) * (WIDTH / 10);
 		if (pthread_create(&threads[i], NULL, draw, &fractals[i]))
 			perror("Error: can't create thread\n");
 		i++;

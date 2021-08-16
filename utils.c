@@ -6,7 +6,7 @@
 /*   By: akliek <akliek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/05 11:26:02 by akliek            #+#    #+#             */
-/*   Updated: 2021/08/05 11:26:29 by akliek           ###   ########.fr       */
+/*   Updated: 2021/08/16 14:45:17 by akliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,29 @@ int	ft_strcmp(const char *s1, const char *s2)
 		i++;
 	}
 	return (0);
+}
+
+int	ft_atoi(const char *str)
+{
+	int		sign;
+	int		res;
+
+	sign = 1;
+	res = 0;
+	while (*str == ' ' || *str == '\n' || *str == '\t'
+		|| *str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign *= -1;
+		str++;
+	}
+	while (*str && *str >= 48 && *str <= 57)
+	{
+		res *= 10;
+		res += *str - 48;
+		str++;
+	}
+	return (sign * res);
 }
