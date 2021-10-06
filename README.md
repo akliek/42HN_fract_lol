@@ -11,14 +11,14 @@ A fractal is an abstract mathematical object, like a curve or a surface, which h
 Links:
 
 https://en.wikipedia.org/wiki/Fractal
-# How to sue
+
 Note: MacOS only supported.
 
-Clone:
+# Clone:
 ```
 git clone <repository url>
 ```
-Installation:
+# Installation:
 
 After creating repository go to created folder and run following command:
 ```
@@ -26,7 +26,7 @@ make
 ```
 Note: Without bonus it will still work, but you will have worse version.
 
-Run:
+# Run:
 
 Then open a terminal in current folder and run ont of the following commands:
 ```
