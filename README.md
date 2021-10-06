@@ -22,7 +22,7 @@ Installation:
 
 After creating repository go to created folder and run following command:
 ```
-make bonus
+make
 ```
 Note: Without bonus it will still work, but you will have worse version.
 
@@ -32,4 +32,4 @@ Then open a terminal in current folder and run ont of the following commands:
 ```
 ./fractol Mandelbrot
 ```
-
+![alt text]()
