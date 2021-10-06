@@ -10,7 +10,9 @@ A fractal is an abstract mathematical object, like a curve or a surface, which h
 
 Links:
 
-https://en.wikipedia.org/wiki/Fractal
+Wikipedia about fracatls: https://en.wikipedia.org/wiki/Fractal
+
+Subject PDF: https://github.com/akliek/42HN_fract_lol/blob/master/en.subject.pdf
 
 Note:
 
