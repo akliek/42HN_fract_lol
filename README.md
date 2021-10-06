@@ -42,3 +42,17 @@ Depends to number you will have another type of Julia set.
 
 ![alt text](https://github.com/akliek/42HN_fract_lol/blob/master/images/Julia4.png?raw=true)
 
+```
+./fractol "Burning Ship"
+```
+![alt text](https://github.com/akliek/42HN_fract_lol/blob/master/images/Burning%20Ship.png?raw=true)
+
+#Controls
+```
+      Scrol mouse button up - zoom up
+      Scrol mouse button down - zoom down
+      Space - change color
+      Arrows - moving
+      + - increase detalization
+      - - decrease detalization
+```
