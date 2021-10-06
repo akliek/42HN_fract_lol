@@ -12,7 +12,9 @@ Links:
 
 https://en.wikipedia.org/wiki/Fractal
 
-Note: MacOS only supported.
+Note:
+
+MacOS only supported.
 
 # Clone:
 ```
