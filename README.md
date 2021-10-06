@@ -47,7 +47,7 @@ Depends to number you will have another type of Julia set.
 ```
 ![alt text](https://github.com/akliek/42HN_fract_lol/blob/master/images/Burning%20Ship.png?raw=true)
 
-#Controls
+# Controls
 ```
       Scrol mouse button up - zoom up
       Scrol mouse button down - zoom down
