@@ -18,16 +18,16 @@ Note:
 
 MacOS only supported.
 
-# Clone:
+# Clone
 ```
 git clone <repository url>
 ```
-# Installation:
+# Installation
 After creating repository go to created folder and run following command:
 ```
 make
 ```
-# Run:
+# Run
 Then open a terminal in current folder and run one of the following commands:
 ```
 ./fractol Mandelbrot
