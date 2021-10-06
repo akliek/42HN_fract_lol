@@ -21,16 +21,12 @@ MacOS only supported.
 git clone <repository url>
 ```
 # Installation:
-
 After creating repository go to created folder and run following command:
 ```
 make
 ```
-Note: Without bonus it will still work, but you will have worse version.
-
 # Run:
-
-Then open a terminal in current folder and run ont of the following commands:
+Then open a terminal in current folder and run one of the following commands:
 ```
 ./fractol Mandelbrot
 ```
