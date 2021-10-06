@@ -32,4 +32,11 @@ Then open a terminal in current folder and run ont of the following commands:
 ```
 ./fractol Mandelbrot
 ```
-![alt text]()
+![alt text](https://github.com/akliek/42HN_fract_lol/blob/master/images/Mandelbrot.png?raw=true)
+```
+./fractol Julia <numer 1 - 4>
+```
+Note:
+
+Depends to number you will have another type of Julia set.
+
