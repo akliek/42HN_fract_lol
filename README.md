@@ -40,3 +40,5 @@ Note:
 
 Depends to number you will have another type of Julia set.
 
+![alt text](https://github.com/akliek/42HN_fract_lol/blob/master/images/Julia4.png?raw=true)
+
