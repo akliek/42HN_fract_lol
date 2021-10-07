@@ -49,8 +49,8 @@ Depends to number you will have another type of Julia set.
 
 # Controls
 ```
-      Scrol mouse button up - zoom up
-      Scrol mouse button down - zoom down
+      Scrol mouse button up - zoom in
+      Scrol mouse button down - zoom out
       Space - change color
       Arrows - moving
       + - increase detalization
