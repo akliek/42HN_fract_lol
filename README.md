@@ -19,6 +19,7 @@ Note:
 MacOS only supported.
 
 # Clone
+Open a terminal and run follownig command:
 ```
 git clone <repository url>
 ```
@@ -28,7 +29,7 @@ After creating repository go to created folder and run following command:
 make
 ```
 # Run
-Then open a terminal in current folder and run one of the following commands:
+After installation run one of the following commands:
 ```
 ./fractol Mandelbrot
 ```
