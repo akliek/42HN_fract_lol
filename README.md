@@ -35,7 +35,7 @@ After installation run one of the following commands:
 ```
 ![alt text](https://github.com/akliek/42HN_fract_lol/blob/master/images/Mandelbrot.png?raw=true)
 ```
-./fractol Julia <numer 1 - 4>
+./fractol Julia <number 1 - 4>
 ```
 Note:
 
